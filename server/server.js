@@ -20,5 +20,17 @@ app.get('/api/test-db', (req, res) => {
   });
 });
 
+const menuRoutes = require('./routes/menuRoutes');
+app.use('/api/menu', menuRoutes);
+
+const tableRoutes = require('./routes/tableRoutes');
+app.use('/api/tables', tableRoutes);
+
+const orderRoutes = require('./routes/orderRoutes');
+app.use('/api/orders', orderRoutes);
+
+const serviceRoutes = require('./routes/serviceRoutes');
+app.use('/api/service', serviceRoutes);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

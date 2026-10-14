@@ -1,0 +1,141 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  padding-bottom: 80px;
+}
+
+header {
+  background: #ff6b35;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#menuContainer {
+  padding: 15px;
+  display: grid;
+  gap: 15px;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-item h3 {
+  font-size: 16px;
+}
+
+.menu-item p {
+  color: #777;
+  font-size: 14px;
+}
+
+.menu-item .price {
+  color: #ff6b35;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.menu-item button {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cartBar {
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cartBar button {
+  background: #ff6b35;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#serviceButtons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+#serviceButtons button {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#cartModal.hidden { display: none; }
+
+#cartModal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#placeOrderBtn {
+  background: #ff6b35;
+  color: white;
+}
+
+#closeCartBtn {
+  background: #eee;
+}
+
+.cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}

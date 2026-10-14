@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🍽️ Our Menu</h1>
+    <p id="tableInfo">Table: --</p>
+  </header>
+
+  <div id="menuContainer">
+    <!-- Menu items yahan JS se dynamically aayenge -->
+  </div>
+
+  <!-- Floating cart button -->
+  <div id="cartBar">
+    <span id="cartCount">0 items</span>
+    <span id="cartTotal">₹0</span>
+    <button id="viewCartBtn">View Cart</button>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="hidden">
+    <div class="modal-content">
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <p id="cartModalTotal">Total: ₹0</p>
+      <button id="placeOrderBtn">Place Order</button>
+      <button id="closeCartBtn">Close</button>
+    </div>
+  </div>
+
+  <!-- Service buttons -->
+  <div id="serviceButtons">
+    <button id="callWaiterBtn">🔔 Call Waiter</button>
+    <button id="requestBillBtn">🧾 Request Bill</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

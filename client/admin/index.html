@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>⚙️ Admin Dashboard</h1>
+  </header>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="menuTab">Menu</button>
+    <button class="tab-btn" data-tab="tableTab">Tables & QR</button>
+    <button class="tab-btn" data-tab="ordersTab">Orders</button>
+  </div>
+
+  <!-- MENU TAB -->
+  <div id="menuTab" class="tab-content active">
+    <h2>Add Menu Item</h2>
+    <form id="addItemForm">
+      <input type="text" id="itemName" placeholder="Item name" required>
+      <input type="number" id="itemPrice" placeholder="Price" required>
+      <input type="number" id="itemCatId" placeholder="Category ID" required>
+      <button type="submit">Add Item</button>
+    </form>
+
+    <h2>All Items</h2>
+    <div id="menuList"></div>
+  </div>
+
+  <!-- TABLES TAB -->
+  <div id="tableTab" class="tab-content">
+    <h2>Add Table</h2>
+    <form id="addTableForm">
+      <input type="text" id="tableNo" placeholder="Table number" required>
+      <button type="submit">Add Table</button>
+    </form>
+
+    <h2>All Tables</h2>
+    <div id="tableList"></div>
+  </div>
+
+  <!-- ORDERS TAB -->
+  <div id="ordersTab" class="tab-content">
+    <h2>All Orders</h2>
+    <div id="orderList"></div>
+  </div>
+
+  <!-- QR Modal -->
+  <div id="qrModal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="qrTableNo"></h3>
+      <img id="qrImageDisplay" src="" alt="QR Code">
+      <p id="qrUrlText" style="word-break: break-all; font-size: 12px;"></p>
+      <button id="closeQrBtn">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
