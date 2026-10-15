@@ -14,21 +14,31 @@ header {
 
 .tabs {
   display: flex;
-  background: white;
+  width: 100%;
+  background: #fff;
   border-bottom: 1px solid #ddd;
 }
 
-.tab-btn {
-  flex: 1;
+.tabs .tab-btn {
+  display: block;
+  flex: 1 1 0;
+  width: 33.333%;
+  min-width: 0;
   padding: 15px;
   border: none;
-  background: white;
+  border-bottom: 3px solid transparent;
+  background: #fff;
+  color: #333;
   cursor: pointer;
   font-size: 15px;
+  text-align: center;
+  white-space: nowrap;
+  visibility: visible;
+  opacity: 1;
 }
 
-.tab-btn.active {
-  border-bottom: 3px solid #ff6b35;
+.tabs .tab-btn.active {
+  border-bottom-color: #ff6b35;
   font-weight: bold;
   color: #ff6b35;
 }
